@@ -1,6 +1,6 @@
 # install: wine
-sudo dpkg --add-architecture i386 && sudo apt update
-sudo apt install -y \
+sudo dpkg --add-architecture i386 && sudo apt-get update
+sudo apt-get install -y \
       wine \
       wine32 \
       wine64 \

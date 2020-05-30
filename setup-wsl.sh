@@ -1,4 +1,3 @@
-provision.sh
 shell/root-core.sh
 shell/fzf.sh
 shell/docker-ce.sh
@@ -39,3 +38,4 @@ shell/jmeter.sh
 shell/postman.sh
 shell/awscli.sh
 shell/gcloud.sh
+shell/font.sh

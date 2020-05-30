@@ -1,4 +1,6 @@
 #!/bin/bash -eu
+export DEBIAN_FRONTEND=noninteractive
+DOTFILES_REPOS=git@github.com:nobiki/dotfiles
 
 function spin() {
     spinner="/|\\-/|\\-"
@@ -26,6 +28,7 @@ function run() {
     kill -9 $SPIN_PID
 }
 
-run test-include
-run test-include
+run shell/apt/core
+run shell/dotfiles
+run shell/locale-ja
 

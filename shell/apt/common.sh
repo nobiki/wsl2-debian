@@ -1,4 +1,4 @@
-sudo apt install -y \
+sudo apt-get install -y \
     screen \
     expect \
     cron \

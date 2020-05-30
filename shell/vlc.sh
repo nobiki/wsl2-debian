@@ -1,1 +1,1 @@
-sudo apt install -y vlc x264
+sudo apt-get install -y vlc x264

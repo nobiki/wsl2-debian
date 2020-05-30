@@ -1,4 +1,4 @@
-sudo apt install -y \
+sudo apt-get install -y \
     vim-nox \
     build-essential \
     autoconf \
