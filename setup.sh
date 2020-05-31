@@ -80,7 +80,9 @@ run shell/ctop
 run shell/trans
 run shell/stacer
 
-# run shell/certbot
+run shell/vim
+
+run shell/certbot
 # shell/postman
 # shell/jmeter
 # shell/awscli
