@@ -47,14 +47,17 @@ run shell/fzf
 run shell/ibus-mozc
 run shell/font
 
+run shell/chrome
+run shell/vlc
+run shell/wine
+
 run shell/apt/common
-# run shell/apt/development
+run shell/apt/development
 
 # shell/anyenv
 # shell/awscli
 # shell/bat
 # shell/certbot
-# shell/chrome
 # shell/ctags
 # shell/direnv
 # shell/docker-ce
@@ -86,7 +89,5 @@ run shell/apt/common
 # shell/stacer
 # shell/trans
 # shell/vim
-# shell/vlc
-# shell/wine
 # shell/xpanes
 # shell/yarn
