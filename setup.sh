@@ -45,6 +45,7 @@ run shell/locale-ja
 run shell/fzf
 
 run shell/ibus-mozc
+run shell/font
 
 run shell/apt/common
 # run shell/apt/development
@@ -60,7 +61,6 @@ run shell/apt/common
 # shell/dotfiles
 # shell/eslint
 # shell/exa
-# shell/font
 # shell/fzf
 # shell/gcloud
 # shell/git_find_big
