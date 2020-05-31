@@ -1,8 +1,9 @@
 #!/bin/bash -eu
 cd $(dirname `realpath $0`)
 
+export HERE=${PWD}
 export DEBIAN_FRONTEND=noninteractive
-DOTFILES_REPOS=git@github.com:nobiki/dotfiles
+export DOTFILES_REPOS=git@github.com:nobiki/dotfiles
 
 function spin() {
     spinner="/|\\-/|\\-"
@@ -24,7 +25,8 @@ function run() {
     SPIN_PID=$!
     trap "kill -9 $SPIN_PID" `seq 0 15`
 
-    . ./${1}.sh 1>/dev/null
+    logfile=${HERE}/log/$(echo ${1} | rev | cut -d '/' -f1 | rev).log
+    ./${1}.sh > ${logfile}
 
     echo "Done (${?})"
     kill -9 $SPIN_PID
