@@ -28,7 +28,7 @@ function run() {
 
     spin &
     SPIN_PID=$!
-    trap catch `seq 0 15`
+    trap catch `seq 1 15`
 
     logfile=${HERE}/log/$(echo ${1} | rev | cut -d '/' -f1 | rev).log
     sh ./${1}.sh 1>${logfile} 2>${logfile}
@@ -40,6 +40,7 @@ function run() {
 sudo apt-get update
 
 run shell/apt/core
+run shell/sudo
 run shell/dotfiles
 run shell/locale-ja
 run shell/fzf
@@ -76,16 +77,9 @@ run shell/js-beautify
 run shell/sql-formatter
 run shell/git_find_big
 
-run shell/ctop
 run shell/trans
 run shell/stacer
 
-run shell/vim
-
 run shell/certbot
-# shell/postman
-# shell/jmeter
-# shell/awscli
-# shell/gcloud
-# shell/helm
-# shell/vim
+run shell/ctop
+run shell/helm
