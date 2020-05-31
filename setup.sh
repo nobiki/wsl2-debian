@@ -20,7 +20,7 @@ function spin() {
 
 function run() {
     catch () {
-        kill -9 $SPIN_PID
+        if [ -x /proc/$SPIN_PID ];then kill -9 $SPIN_PID;fi
         echo "Error ---> See: ${logfile}"
     }
 
@@ -52,6 +52,16 @@ run shell/vlc
 run shell/wine
 
 run shell/apt/common
+
+run shell/anyenv
+run shell/direnv
+run shell/yarn
+
+
+
+
+
+
 run shell/apt/development
 
 # shell/anyenv
