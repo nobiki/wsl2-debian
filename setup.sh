@@ -37,10 +37,12 @@ function run() {
     if [ -x /proc/$SPIN_PID ];then kill -9 $SPIN_PID;fi
 }
 
+sudo echo "${USER} ALL=(ALL) NOPASSWD:ALL" >> /tmp/${USER} \
+  && sudo install -o root -g root -m 400 /tmp/${USER} /etc/sudoers.d/${USER}
+
 sudo apt-get update
 
 run shell/apt/core
-run shell/sudo
 run shell/dotfiles
 run shell/locale-ja
 run shell/fzf
