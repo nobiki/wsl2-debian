@@ -57,6 +57,12 @@ run shell/anyenv
 run shell/direnv
 run shell/yarn
 
+run shell/bat
+run shell/exa
+run shell/hcat
+run shell/jq
+run shell/ripgrep
+run shell/xpanes
 
 
 
@@ -64,25 +70,19 @@ run shell/yarn
 
 run shell/apt/development
 
-# shell/anyenv
 # shell/awscli
-# shell/bat
 # shell/certbot
 # shell/ctags
-# shell/direnv
 # shell/docker-ce
 # shell/dotfiles
 # shell/eslint
-# shell/exa
 # shell/fzf
 # shell/gcloud
 # shell/git_find_big
 # shell/goenv
 # shell/hadolint
-# shell/hcat
 # shell/helm
 # shell/jmeter
-# shell/jq
 # shell/js-beautify
 # shell/locale-ja
 # shell/nginx
@@ -93,11 +93,8 @@ run shell/apt/development
 # shell/postman
 # shell/pyenv
 # shell/rbenv
-# shell/ripgrep
 # shell/rsense
 # shell/sql-formatter
 # shell/stacer
 # shell/trans
 # shell/vim
-# shell/xpanes
-# shell/yarn
