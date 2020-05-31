@@ -48,6 +48,7 @@ sudo echo "${USER} ALL=(ALL) NOPASSWD:ALL" >> /tmp/${USER} \
   && sudo install -o root -g root -m 400 /tmp/${USER} /etc/sudoers.d/${USER}
 
 sudo apt-get update
+sudo apt-get upgrade
 
 run shell/apt/core
 run shell/dotfiles
@@ -88,5 +89,8 @@ run shell/git_find_big
 run shell/certbot
 run shell/ctop
 run shell/helm
+
+sudo rm -rf /tmp/*
+sudo apt autoremove
 
 trap 0 && echo "Finish"
