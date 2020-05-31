@@ -55,6 +55,8 @@ run shell/apt/common
 
 run shell/anyenv
 run shell/direnv
+run shell/phpenv
+run shell/pyenv
 run shell/yarn
 
 run shell/bat
@@ -67,8 +69,6 @@ run shell/xpanes
 run shell/certbot
 
 run shell/ctop
-
-
 
 run shell/apt/development
 

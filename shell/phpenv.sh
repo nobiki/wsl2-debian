@@ -1,4 +1,4 @@
-sudo apt install -y g++ \
+sudo apt-get install -y g++ \
   libxml2 libxml2-dev \
   libssl-dev pkg-config \
   zlib1g-dev \
@@ -13,6 +13,6 @@ sudo apt install -y g++ \
   libzip-dev \
   libxslt1.1 \
   libxslt-dev \
-  libicu-devel
+  libicu-dev
 
-anyenv install phpenv
+# anyenv install phpenv
