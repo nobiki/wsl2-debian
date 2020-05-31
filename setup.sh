@@ -68,7 +68,6 @@ run shell/anyenv
 run shell/direnv
 run shell/phpenv
 run shell/pyenv
-run shell/yarn
 
 run shell/bat
 run shell/exa
@@ -84,7 +83,6 @@ run shell/ctags
 run shell/phpcs
 run shell/rsense
 run shell/hadolint
-run shell/js-beautify
 run shell/sql-formatter
 run shell/git_find_big
 
