@@ -1,5 +1,7 @@
-#!/bin/bash -eu
+#!/bin/bash
 cd $(dirname `realpath $0`); export HERE=${PWD}
+
+set -E
 
 export DEBIAN_FRONTEND=noninteractive
 export DOTFILES_REPOS=git@github.com:nobiki/dotfiles
@@ -22,19 +24,25 @@ function run() {
     catch () {
         if [ -x /proc/$SPIN_PID ];then kill -9 $SPIN_PID;fi
         echo "Error ---> See: ${logfile}"
+        exit 1
     }
 
     echo -n "${1} ................... "
 
     spin &
     SPIN_PID=$!
-    trap catch `seq 1 15`
+    trap catch `seq 0 15`
 
     logfile=${HERE}/log/$(echo ${1} | rev | cut -d '/' -f1 | rev).log
-    sh ./${1}.sh 1>${logfile} 2>${logfile}
+    . ./${1}.sh 1>${logfile} 2>${logfile}
+    result=$?
 
-    echo "Done"
-    if [ -x /proc/$SPIN_PID ];then kill -9 $SPIN_PID;fi
+    if [ $result = 0 ]; then
+        kill -9 $SPIN_PID
+        echo "Done"
+    else
+        exit 1
+    fi
 }
 
 sudo echo "${USER} ALL=(ALL) NOPASSWD:ALL" >> /tmp/${USER} \
@@ -71,6 +79,7 @@ run shell/xpanes
 
 run shell/apt/development
 
+run shell/trans
 run shell/ctags
 run shell/phpcs
 run shell/rsense
@@ -79,9 +88,8 @@ run shell/js-beautify
 run shell/sql-formatter
 run shell/git_find_big
 
-run shell/trans
-run shell/stacer
-
 run shell/certbot
 run shell/ctop
 run shell/helm
+
+trap 0 && echo "Finish"
