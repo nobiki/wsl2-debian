@@ -1,4 +1,4 @@
 sudo apt-get install -y bsdmainutils gawk
-sudo git clone "https://github.com/soimort/translate-shell" /usr/local/lib/translate-shell
-sudo make -C /usr/local/lib/translate-shell
-sudo make -C /usr/local/lib/translate-shell install
+sudo git clone "https://github.com/soimort/translate-shell" /tmp/translate-shell
+sudo make -C /tmp/translate-shell
+sudo make -C /tmp/translate-shell install

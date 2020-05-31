@@ -66,30 +66,24 @@ run shell/jq
 run shell/ripgrep
 run shell/xpanes
 
-run shell/certbot
-
-run shell/ctop
-
 run shell/apt/development
 
-# shell/awscli
-# shell/ctags
-# shell/eslint
-# shell/gcloud
-# shell/git_find_big
-# shell/goenv
-# shell/hadolint
-# shell/helm
-# shell/jmeter
-# shell/js-beautify
-# shell/nodenv
-# shell/phpcs
-# shell/phpenv
+run shell/ctags
+run shell/phpcs
+run shell/rsense
+run shell/hadolint
+run shell/js-beautify
+run shell/sql-formatter
+run shell/git_find_big
+
+run shell/ctop
+run shell/trans
+run shell/stacer
+
+# run shell/certbot
 # shell/postman
-# shell/pyenv
-# shell/rbenv
-# shell/rsense
-# shell/sql-formatter
-# shell/stacer
-# shell/trans
+# shell/jmeter
+# shell/awscli
+# shell/gcloud
+# shell/helm
 # shell/vim
