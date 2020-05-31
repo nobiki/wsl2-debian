@@ -64,6 +64,7 @@ run shell/jq
 run shell/ripgrep
 run shell/xpanes
 
+run shell/certbot
 
 
 
@@ -71,12 +72,9 @@ run shell/xpanes
 run shell/apt/development
 
 # shell/awscli
-# shell/certbot
 # shell/ctags
 # shell/docker-ce
-# shell/dotfiles
 # shell/eslint
-# shell/fzf
 # shell/gcloud
 # shell/git_find_big
 # shell/goenv
