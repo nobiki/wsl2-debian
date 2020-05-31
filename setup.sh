@@ -42,9 +42,9 @@ sudo apt-get update
 run shell/apt/core
 run shell/dotfiles
 run shell/locale-ja
-run shell/error
-
 run shell/fzf
+
+run shell/ibus-mozc
 
 run shell/apt/common
 # run shell/apt/development
@@ -68,7 +68,6 @@ run shell/apt/common
 # shell/hadolint
 # shell/hcat
 # shell/helm
-# shell/ibus-mozc
 # shell/jmeter
 # shell/jq
 # shell/js-beautify
