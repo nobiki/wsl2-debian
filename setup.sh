@@ -19,17 +19,22 @@ function spin() {
 }
 
 function run() {
+    catch () {
+        kill -9 $SPIN_PID
+        echo "Error ---> See: ${logfile}"
+    }
+
     echo -n "${1} ................... "
 
     spin &
     SPIN_PID=$!
-    trap "kill -9 $SPIN_PID" `seq 0 15`
+    trap catch `seq 0 15`
 
     logfile=${HERE}/log/$(echo ${1} | rev | cut -d '/' -f1 | rev).log
-    ./${1}.sh > ${logfile}
+    sh ./${1}.sh 1>${logfile} 2>${logfile}
 
-    echo "Done (${?})"
-    kill -9 $SPIN_PID
+    echo "Done"
+    if [ -x /proc/$SPIN_PID ];then kill -9 $SPIN_PID;fi
 }
 
 sudo apt-get update
@@ -37,9 +42,12 @@ sudo apt-get update
 run shell/apt/core
 run shell/dotfiles
 run shell/locale-ja
+run shell/error
+
+run shell/fzf
 
 run shell/apt/common
-run shell/apt/development
+# run shell/apt/development
 
 # shell/anyenv
 # shell/awscli
