@@ -5,7 +5,6 @@ set -E
 
 export DEBIAN_FRONTEND=noninteractive
 export DOTFILES_REPOS=git@github.com:nobiki/dotfiles
-export VIM_REPOS=git@github.com:nobiki/vim
 
 function spin() {
     spinner="/|\\-/|\\-"
