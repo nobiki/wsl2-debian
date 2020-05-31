@@ -1,9 +1,9 @@
 #!/bin/bash -eu
-cd $(dirname `realpath $0`)
+cd $(dirname `realpath $0`); export HERE=${PWD}
 
-export HERE=${PWD}
 export DEBIAN_FRONTEND=noninteractive
 export DOTFILES_REPOS=git@github.com:nobiki/dotfiles
+export VIM_REPOS=git@github.com:nobiki/vim
 
 function spin() {
     spinner="/|\\-/|\\-"
@@ -66,6 +66,7 @@ run shell/xpanes
 
 run shell/certbot
 
+run shell/ctop
 
 
 
@@ -73,7 +74,6 @@ run shell/apt/development
 
 # shell/awscli
 # shell/ctags
-# shell/docker-ce
 # shell/eslint
 # shell/gcloud
 # shell/git_find_big
@@ -82,9 +82,6 @@ run shell/apt/development
 # shell/helm
 # shell/jmeter
 # shell/js-beautify
-# shell/locale-ja
-# shell/nginx
-# shell/ngrok
 # shell/nodenv
 # shell/phpcs
 # shell/phpenv
